@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUICardsGUI.WelcomePlayersPage"
+             Title="WelcomePlayersPage"
+             xmlns:local="clr-namespace:MAUICardsGUI"
+             BackgroundColor="#247E5C">
+    
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+        <Image Source="logo.png" HeightRequest="90"  />
+        <Label Text="Welcome Gigi, you are player #1" FontSize="50" HorizontalOptions="Center" TextColor="#FFFFFF" />
+        <Label Text="Welcome Bob, you are player #2" FontSize="50" HorizontalOptions="Center" TextColor="#FFFFFF" />
+
+        <Button x:Name="next" Text="Next" FontSize="Large" WidthRequest="400" 
+           BackgroundColor="#FF8B38" CornerRadius="20" Clicked="Next_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

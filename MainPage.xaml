@@ -3,6 +3,7 @@
              x:Class="MAUICardsGUI.MainPage"
              xmlns:local="clr-namespace:MAUICardsGUI"
              BackgroundColor="#247E5C">
+
     <ContentPage.BindingContext>
         <local:ImagesViewModel />
     </ContentPage.BindingContext>
@@ -13,8 +14,11 @@
             <DataTemplate>
                 
                 <StackLayout>
-                        <Image Source="{Binding ImageUrl}" HeightRequest="128"  />
-                    <Label Text="Welcome to" FontSize="32" HorizontalOptions="Center" TextColor="#FFFFFF" />
+
+                        <Image Source="{Binding ImageUrl}" HeightRequest="128"/>
+    
+
+                        <Label Text="Welcome to" FontSize="32" HorizontalOptions="Center" TextColor="#FFFFFF" />
                         <Label Text="Race to 21" FontSize="50" HorizontalOptions="Center" TextColor="#FFFFFF" />
                       
                     </StackLayout>

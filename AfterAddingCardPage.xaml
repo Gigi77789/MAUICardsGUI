@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUICardsGUI.AfterAddingCardPage"
+             Title="AfterAddingCardPage"            
+             xmlns:local="clr-namespace:MAUICardsGUI"
+             BackgroundColor="#247E5C">
+
+    <ContentPage.BindingContext>
+        <local:ImagesViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+        <Label Text="Gigi got : 4 of clubs = 14 / 21" FontSize="50"  HorizontalOptions="Center"
+               FontAttributes="Bold" TextColor="#FFE500" />
+
+        <CollectionView x:Name="Collector"  ItemsSource="{Binding Images}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout>
+                        <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                            <Image Source="{Binding ImageUrl}" HeightRequest="120" />
+                            <Image Source="C:\Users\DGM6308\Desktop\MAUICardsGUI-master\images\card_clubs_04.png" HeightRequest="120"  />
+                        </HorizontalStackLayout>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+            <Button x:Name="Next" Text="next" FontSize="Large" WidthRequest="400" TextColor="Black" 
+   BackgroundColor="#FFFDE2" CornerRadius="20" />
+
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+
+</ContentPage>

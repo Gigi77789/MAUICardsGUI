@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUICardsGUI.AddACardPage"
+             Title="AddACardPage"     
+             xmlns:local="clr-namespace:MAUICardsGUI"
+             BackgroundColor="#247E5C">
+
+    <ContentPage.BindingContext>
+        <local:ImagesViewModel />
+    </ContentPage.BindingContext>
+    
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+            <Label Text="Gigi got : 10 of diamonds = 10 / 21" FontSize="50"  HorizontalOptions="Center"
+               FontAttributes="Bold" TextColor="#FFE500" />
+        
+        <CollectionView x:Name="Collector"  ItemsSource="{Binding Images}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout>
+                        <Image Source="{Binding ImageUrl}" HeightRequest="120"  />
+
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Label Text="Gigi, do you want a card?" FontSize="32" HorizontalOptions="Center" TextColor="#FFFFFF" />
+            
+
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20">
+            <Button x:Name="yes" Text="YES" FontSize="Large" WidthRequest="400" TextColor="Black" 
+            BackgroundColor="#FFFDE2" CornerRadius="20" Clicked="Yes_Clicked"/>
+            <Button x:Name="no" Text="No" FontSize="Large" WidthRequest="400"  TextColor="Black" 
+            BackgroundColor="#FFFDE2" CornerRadius="20"/>
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+
+</ContentPage>
