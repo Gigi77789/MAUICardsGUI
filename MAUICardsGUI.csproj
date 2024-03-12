@@ -57,6 +57,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiImage Remove="Resources\Images\card_diamonds_10.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="images\card_back.png" />
 	  <None Remove="images\card_clubs_02.png" />
 	  <None Remove="images\card_clubs_03.png" />
@@ -113,6 +117,7 @@
 	  <None Remove="images\card_spades_J.png" />
 	  <None Remove="images\card_spades_K.png" />
 	  <None Remove="images\card_spades_Q.png" />
+	  <None Remove="Resources\Images\card_diamonds_10.png" />
 	  <None Remove="Resources\Images\logo.png" />
 	</ItemGroup>
 
@@ -179,12 +184,29 @@
 	  <EmbeddedResource Include="images\card_spades_J.png" />
 	  <EmbeddedResource Include="images\card_spades_K.png" />
 	  <EmbeddedResource Include="images\card_spades_Q.png" />
+	  <EmbeddedResource Include="Resources\Images\card_diamonds_10.png" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="AddACardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="AfterAddingCardPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="GamePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="howManyPlayersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="NameOfPlayersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 
 </Project>

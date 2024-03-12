@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUICardsGUI.NameOfPlayersPage"
+           
+             Title="NameOfPlayersPage"
+             BackgroundColor="#247E5C" >
+
+    <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+        <Image Source="logo.png" HeightRequest="90"  />
+        <Label Text="What are the names of players?" FontSize="50" HorizontalOptions="Center" TextColor="#FFFFFF" />
+        <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            <Entry x:Name="NamesOfPlayers1"
+           Placeholder="Name of player 1"
+           SemanticProperties.Description="Name of player 1"
+           BackgroundColor="#FFFFFF"
+           WidthRequest="500"
+           FontSize="20" IsVisible="False"/>
+            <Entry x:Name="NamesOfPlayers2" Placeholder="Name of player 2"
+           SemanticProperties.Description="Name of player 2"
+           BackgroundColor="#FFFFFF"
+           WidthRequest="500"
+           FontSize="20" IsVisible="False"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout  HorizontalOptions="Center" Spacing="10">
+            <Entry x:Name="NamesOfPlayers3"
+           Placeholder="Name of player 3"
+           SemanticProperties.Description="Name of player 3"
+           BackgroundColor="#FFFFFF"
+           WidthRequest="500"
+           FontSize="20" IsVisible="False"/>
+            <Entry x:Name="NamesOfPlayers4" Placeholder="Name of player 4"
+           SemanticProperties.Description="Name of player 4"
+           BackgroundColor="#FFFFFF"
+           WidthRequest="500"
+           FontSize="20" IsVisible="False"/>
+        </HorizontalStackLayout>
+      
+
+
+        <Button x:Name="next" Text="Next" FontSize="Large" WidthRequest="400" 
+        BackgroundColor="#FF8B38" CornerRadius="20" Clicked="Next_Clicked" />
+    </VerticalStackLayout>
+</ContentPage>
