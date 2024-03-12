@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUICardsGUI.GamePage"
+             Title="GamePage"
+             BackgroundColor="#247E5C">
+
+    <Grid HorizontalOptions="Center" VerticalOptions="Center"
+          RowSpacing="50" ColumnSpacing="50">
+            <!-- 定义行和列 -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- 左上角模块 -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="0"
+                             BackgroundColor="#215441"
+                             WidthRequest="500"
+                             Padding="30,0,0,30"
+                             x:Name="player1Layout" >
+                <Label 
+                       x:Name="player1Name"
+                       FontSize="Large"
+                       HorizontalOptions="Center"
+                       TextColor="White"/>
+
+                <Image Source="cardImage.png"
+                      WidthRequest="100"
+                      HeightRequest="140"
+                      HorizontalOptions="Center" />
+
+                <Label Text="Hit or Stay?"
+                       x:Name="player1CardLabel"
+                      FontSize="Small"
+                      HorizontalOptions="Center"
+                      TextColor="White"/>
+
+            <Label x:Name="player1StatusLabel"
+       FontSize="Medium"
+       HorizontalOptions="Center"
+       TextColor="Red"/>
+
+            <StackLayout Orientation="Horizontal"
+                            Spacing="20"
+                            HorizontalOptions="Center"
+                            Padding="20">
+                <Button Text="HIT" 
+                        Clicked="Player1HitClicked"
+                        BackgroundColor="#FF8B38"
+                        HorizontalOptions="Center" 
+                        TextColor="White" 
+                        WidthRequest="100" 
+                        FontAttributes="Bold"/>
+                <Button Text="STAY"
+                        Clicked="Player1StayClicked"
+                        BackgroundColor="#FF8B38"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        WidthRequest="100"
+                        FontAttributes="Bold"/>
+            </StackLayout>
+            </VerticalStackLayout>
+
+            <!-- 右上角模块 -->
+            <VerticalStackLayout Grid.Row="0" Grid.Column="1"
+                             BackgroundColor="#215441"
+                             WidthRequest="500"
+                             Padding="30,0,0,30"
+                             x:Name="player2Layout">
+
+            <Label 
+                   x:Name="player2Name"
+                      FontSize="Large"
+                      HorizontalOptions="Center"
+                      TextColor="White"/>
+
+                <Image Source="cardImage.png"
+                      WidthRequest="100"
+                      HeightRequest="140"
+                      HorizontalOptions="Center" />
+
+            <Label Text="Hit or Stay?"
+                       x:Name="player2CardLabel"
+                      FontSize="Small"
+                      HorizontalOptions="Center"
+                      TextColor="White"/>
+
+                <Label x:Name="player2StatusLabel"
+       FontSize="Medium"
+       HorizontalOptions="Center"
+       TextColor="Red"/>
+
+                <StackLayout Orientation="Horizontal"
+                            Spacing="20"
+                            HorizontalOptions="Center"
+                            Padding="20">
+                <Button Text="HIT"
+                        Clicked="Player2HitClicked"
+                        BackgroundColor="#FF8B38"
+                        HorizontalOptions="Center"
+                        TextColor="White"
+                        WidthRequest="100"
+                        FontAttributes="Bold"/>
+                <Button Text="STAY"
+                        Clicked="Player2StayClicked"
+           BackgroundColor="#FF8B38"
+           HorizontalOptions="Center"
+           TextColor="White"
+            WidthRequest="100"
+            FontAttributes="Bold"/>
+            </StackLayout>
+        </VerticalStackLayout>
+
+            <!-- 左下角模块 -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="0"
+                             BackgroundColor="#215441"
+                             WidthRequest="500"
+                             Padding="30,0,0,30"
+                             x:Name="player3Layout">
+            <Label 
+                   x:Name="player3Name"
+                       FontSize="Large"
+                       HorizontalOptions="Center"
+                       TextColor="White"/>
+
+                <Image Source="cardImage.png"
+                       WidthRequest="100"
+                       HeightRequest="140"
+                       HorizontalOptions="Center" />
+
+
+            <Label Text="Hit or Stay?"
+                       x:Name="player3CardLabel"
+                      FontSize="Small"
+                      HorizontalOptions="Center"
+                      TextColor="White"/>
+
+            <Label x:Name="player3StatusLabel"
+       FontSize="Medium"
+       HorizontalOptions="Center"
+       TextColor="Red"/>
+
+            <StackLayout Orientation="Horizontal"
+                             Spacing="20"
+                             HorizontalOptions="Center"
+                             Padding="20">
+                    <Button Text="HIT"
+                            Clicked="Player3HitClicked"
+                            BackgroundColor="#FF8B38"
+                            HorizontalOptions="Center"
+                            TextColor="White"
+                            WidthRequest="100"
+                            FontAttributes="Bold"/>
+                    <Button Text="STAY"
+                            Clicked="Player3StayClicked"
+                            BackgroundColor="#FF8B38"
+                            HorizontalOptions="Center"
+                            TextColor="White"
+                            WidthRequest="100"
+                            FontAttributes="Bold"/>
+                </StackLayout>
+          </VerticalStackLayout>
+
+            <!-- 右下角模块 -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1"
+                             BackgroundColor="#215441"
+                             WidthRequest="500"
+                             Padding="30,0,0,30"
+                             x:Name="player4Layout">
+
+            <Label
+                   x:Name="player4Name"
+                      FontSize="Large"
+                      HorizontalOptions="Center"
+                      TextColor="White"/>
+
+                <Image Source="cardImage.png"
+                      WidthRequest="100"
+                      HeightRequest="140"
+                      HorizontalOptions="Center" />
+
+
+            <Label Text="Hit or Stay?"
+                       x:Name="player4CardLabel"
+                      FontSize="Small"
+                      HorizontalOptions="Center"
+                      TextColor="White"/>
+
+            <Label x:Name="player4StatusLabel"
+       FontSize="Medium"
+       HorizontalOptions="Center"
+       TextColor="Red"/>
+
+            <StackLayout Orientation="Horizontal"
+                            Spacing="20"
+                            HorizontalOptions="Center"
+                            Padding="20">
+                <Button Text="HIT"
+                        Clicked="Player4HitClicked"
+                           BackgroundColor="#FF8B38"
+                           HorizontalOptions="Center"
+                        TextColor="White"
+                        WidthRequest="100"
+                        FontAttributes="Bold"/>
+                    <Button Text="STAY"
+                            Clicked="Player4StayClicked"
+                           BackgroundColor="#FF8B38"
+                           HorizontalOptions="Center"
+                           TextColor="White"
+                            WidthRequest="100"
+                            FontAttributes="Bold"/>
+            </StackLayout>
+        </VerticalStackLayout>
+
+        </Grid>
+
+</ContentPage>
