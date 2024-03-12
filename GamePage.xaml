@@ -7,7 +7,7 @@
 
     <Grid HorizontalOptions="Center" VerticalOptions="Center"
           RowSpacing="50" ColumnSpacing="50">
-            <!-- 定义行和列 -->
+
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
@@ -18,7 +18,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <!-- 左上角模块 -->
+   
             <VerticalStackLayout Grid.Row="0" Grid.Column="0"
                              BackgroundColor="#215441"
                              WidthRequest="500"
@@ -67,7 +67,7 @@
             </StackLayout>
             </VerticalStackLayout>
 
-            <!-- 右上角模块 -->
+ 
             <VerticalStackLayout Grid.Row="0" Grid.Column="1"
                              BackgroundColor="#215441"
                              WidthRequest="500"
@@ -117,7 +117,7 @@
             </StackLayout>
         </VerticalStackLayout>
 
-            <!-- 左下角模块 -->
+
             <VerticalStackLayout Grid.Row="1" Grid.Column="0"
                              BackgroundColor="#215441"
                              WidthRequest="500"
@@ -167,7 +167,7 @@
                 </StackLayout>
           </VerticalStackLayout>
 
-            <!-- 右下角模块 -->
+
             <VerticalStackLayout Grid.Row="1" Grid.Column="1"
                              BackgroundColor="#215441"
                              WidthRequest="500"
