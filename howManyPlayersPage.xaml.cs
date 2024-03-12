@@ -1,13 +1,3 @@
-namespace MAUICardsGUI;
-
-<<<<<<< Updated upstream
-public partial class howManyPlayersPage : ContentPage
-{
-	public howManyPlayersPage()
-	{
-		InitializeComponent();
-	}
-=======
 using Microsoft.Maui.Controls;
 
 namespace MAUICardsGUI
@@ -26,5 +16,5 @@ namespace MAUICardsGUI
         }
       
     }
->>>>>>> Stashed changes
+
 }
