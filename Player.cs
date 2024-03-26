@@ -1,4 +1,4 @@
-﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls;
 
 namespace MAUICardsGUI
 {	
@@ -9,7 +9,8 @@ namespace MAUICardsGUI
 	public class Player
 	{
 		public string name;
-		public List<Card> cards = new List<Card>();
+        public string Name { get; set; }
+        public List<Card> cards = new List<Card>();
 		public PlayerStatus status = PlayerStatus.active;
 		public int score;
 
