@@ -11,35 +11,45 @@
         <Image Source="logo.png" HeightRequest="90"  />
         <Label Text="What are the names of players?" FontSize="50" HorizontalOptions="Center" TextColor="#FFFFFF" />
         <HorizontalStackLayout Spacing="10" HorizontalOptions="Center">
+            
             <Entry x:Name="NamesOfPlayers1"
-           Placeholder="Name of player 1"
-           SemanticProperties.Description="Name of player 1"
-           BackgroundColor="#FFFFFF"
-           WidthRequest="500"
-           FontSize="20" IsVisible="False"/>
+                   Placeholder="Name of player 1"
+                   SemanticProperties.Description="Name of player 1"
+                   BackgroundColor="#FFFFFF"
+                   WidthRequest="500"
+                   FontSize="20" IsVisible="False"/>
+            
             <Entry x:Name="NamesOfPlayers2" Placeholder="Name of player 2"
-           SemanticProperties.Description="Name of player 2"
-           BackgroundColor="#FFFFFF"
-           WidthRequest="500"
-           FontSize="20" IsVisible="False"/>
+                   SemanticProperties.Description="Name of player 2"
+                   BackgroundColor="#FFFFFF"
+                   WidthRequest="500"
+                   FontSize="20" IsVisible="False"/>
+            
         </HorizontalStackLayout>
+        
         <HorizontalStackLayout  HorizontalOptions="Center" Spacing="10">
+            
             <Entry x:Name="NamesOfPlayers3"
-           Placeholder="Name of player 3"
-           SemanticProperties.Description="Name of player 3"
-           BackgroundColor="#FFFFFF"
-           WidthRequest="500"
-           FontSize="20" IsVisible="False"/>
-            <Entry x:Name="NamesOfPlayers4" Placeholder="Name of player 4"
-           SemanticProperties.Description="Name of player 4"
-           BackgroundColor="#FFFFFF"
-           WidthRequest="500"
-           FontSize="20" IsVisible="False"/>
-        </HorizontalStackLayout>
-      
+                   Placeholder="Name of player 3"
+                   SemanticProperties.Description="Name of player 3"
+                   BackgroundColor="#FFFFFF"
+                   WidthRequest="500"
+                   FontSize="20" IsVisible="False"/>
 
+            <Entry x:Name="NamesOfPlayers4" Placeholder="Name of player 4"
+                   SemanticProperties.Description="Name of player 4"
+                   BackgroundColor="#FFFFFF"
+                   WidthRequest="500"
+                   FontSize="20" IsVisible="False"/>
+
+        </HorizontalStackLayout>
+
+        <Label x:Name="ErrorMessageLabel" 
+                   HorizontalOptions="Center" 
+                   Text="Every player needs a name!!"
+                   TextColor="White" IsVisible="False" />
 
         <Button x:Name="next" Text="Next" FontSize="Large" WidthRequest="400" 
-        BackgroundColor="#FF8B38" CornerRadius="20" Clicked="Next_Clicked" />
+                BackgroundColor="#FF8B38" CornerRadius="15" Clicked="Next_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
