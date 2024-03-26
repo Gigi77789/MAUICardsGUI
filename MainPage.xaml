@@ -1,27 +1,20 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MAUICardsGUI.MainPage"
              xmlns:local="clr-namespace:MAUICardsGUI"
              BackgroundColor="#247E5C">
-    <ContentPage.BindingContext>
-        <local:ImagesViewModel />
-    </ContentPage.BindingContext>
+
+
     <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
-        
-        <CollectionView x:Name="Collector"  ItemsSource="{Binding Images}">
-        <CollectionView.ItemTemplate>
-            <DataTemplate>
-                
-                <StackLayout>
-                        <Image Source="{Binding ImageUrl}" HeightRequest="128"  />
-                    <Label Text="Welcome to" FontSize="32" HorizontalOptions="Center" TextColor="#FFFFFF" />
-                        <Label Text="Race to 21" FontSize="50" HorizontalOptions="Center" TextColor="#FFFFFF" />
-                      
-                    </StackLayout>
-            </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        <Image Source="logo.png" HeightRequest="90"  />
+        <Label Text="Welcome to" FontSize="32" HorizontalOptions="Center" TextColor="#FFFFFF" />
+        <Label Text="Race to 21"
+       FontSize="60"
+       HorizontalOptions="Center"
+       TextColor="#FFFFFF"
+       FontAttributes="Bold" />
+
         <Button x:Name="newGame" Text="New Game" FontSize="Large" WidthRequest="400" 
-                BackgroundColor="#FF8B38" CornerRadius="20" Clicked="NewGame_Clicked" />
+                BackgroundColor="#FF8B38" CornerRadius="15" Clicked="NewGame_Clicked" />
     </VerticalStackLayout>
 </ContentPage>
